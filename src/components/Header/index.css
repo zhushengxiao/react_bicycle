@@ -1,0 +1,48 @@
+/** 常用色值 **/
+.header {
+  background: #ffffff;
+}
+.header .header-top {
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  text-align: right;
+}
+.header .header-top .exit {
+  margin-left: 40px;
+  color: #1da57a;
+}
+.header .breadcrumb {
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #1da57a;
+}
+.header .breadcrumb .breadcrumb-title {
+  text-align: center;
+  font-size: 18px;
+}
+.header .breadcrumb .breadcrumb-title:after {
+  content: ' ';
+  position: absolute;
+  left: 40px;
+  top: 39px;
+  border-top: 9px solid #1da57a;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+.header .breadcrumb .weather {
+  text-align: right;
+  font-size: 14px;
+}
+.header .breadcrumb .weather .date {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.header .breadcrumb .weather .weather-img .img {
+  height: 15px;
+}
+.header .breadcrumb .weather .weather-detail {
+  margin-left: 5px;
+  vertical-align: middle;
+}
