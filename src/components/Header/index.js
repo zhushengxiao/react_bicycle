@@ -22,7 +22,7 @@ export default class Header extends React.Component {
 	}
 
 	getWeatherAPIData() {
-		let city = '北京'
+		let city = '武威'
 		Axios.jsonp({
 			url:
 				'http://api.map.baidu.com/telematics/v3/weather?location=' +
@@ -38,9 +38,25 @@ export default class Header extends React.Component {
 	}
 
 	render() {
+		const {
+			userName,
+			sysTime,
+			dayPictureUrl,
+			weather,
+			title,
+			menuType,
+		} = this.props
 		return (
 			<div className="header">
 				<Row className="header-top">
+					{menuType ? (
+						<Col span={6} className="logo">
+							<img src="/assets/logo-ant.svg" alt="" />
+							<span>IMooc 通用管理系统</span>
+						</Col>
+					) : (
+						''
+					)}
 					<Col span={24}>
 						<span>欢迎，{this.state.userName}</span>
 						<span className="exit">退出</span>

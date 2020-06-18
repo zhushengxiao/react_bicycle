@@ -1,20 +1,68 @@
 @import './default';
-.container {
-	display: flex;
 
-	.nav-left {
-		width: 15%;
-		min-width: 180px;
-		height: calc(100vh);
-		background: #001529;
-	}
-	.main {
-		flex: 1;
-		height: calc(100vh);
-		background: @colorL;
-	}
-	.content {
-		position: relative;
-		padding: 20px;
-	}
+.container {
+    display: flex;
+
+    .nav-left {
+        width     : 15%;
+        min-width : 180px;
+        height    : calc(100vh);
+        background: #001529;
+    }
+
+    .main {
+        flex      : 1;
+        height    : calc(100vh);
+        background: @colorL;
+        overflow  : auto;
+    }
+
+    .content {
+        position: relative;
+        padding : 20px;
+    }
+}
+
+.card-wrap {
+    margin-bottom: 10px;
+
+    button {
+        margin-right: 10px;
+    }
+}
+
+.ant-table-contentWrap {
+    background: #ffffff;
+    border    : 1px solid #e8e8e8;
+    margin-top: -3px;
+
+    .ant-table-wrapper {
+        margin-left : -1px;
+        margin-right: -2px;
+    }
+}
+
+.simple-page {
+    .header-top {
+        background: #1890ff;
+        color     : @colorM;
+
+        a {
+            color: yellow;
+        }
+    }
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.clearfix {
+    &::after {
+        content   : ' ';
+        clear     : both;
+        display   : block;
+        visibility: hidden;
+    }
 }

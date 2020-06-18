@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { Menu /*Icon*/ } from 'antd'
 import MenuConfig from '../../config/menuConfig'
 import './index.less'
@@ -20,19 +21,23 @@ export default class NavLeft extends React.Component {
 					</SubMenu>
 				)
 			} else {
-				return <Menu.Item key={item.key}>{item.title}</Menu.Item>
+				return (
+					<Menu.Item key={item.key} title={item.title}>
+						<NavLink to={'/admin' + item.key}>{item.title}</NavLink>
+					</Menu.Item>
+				)
 			}
 		})
 	}
 
 	render() {
 		return (
-			<div>
+			<div className="navleft">
 				<div className="logo">
 					<img src="/assets/logo-ant.svg" alt="" />
 					<h1>AntD MS</h1>
 				</div>
-				<Menu mode="vertical" theme="dark">
+				<Menu mode="vertical" theme="dark" className="navMenu">
 					{this.state.menuTreeNode}
 				</Menu>
 			</div>
